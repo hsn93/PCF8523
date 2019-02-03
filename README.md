@@ -1,9 +1,8 @@
 # PCF8523 library
 RTC Real time clock for ASF project CPP
 
-there is allready a library for this chip:
-- https://github.com/SpellFoundry/PCF8523/blob/master/PCF8523.cpp
-
+there is allready a [library](https://github.com/SpellFoundry/PCF8523/blob/master/PCF8523.cpp) for this chip:
+i used some definitions from there ..
 
 but this project is for ATMEL ASF project.
 
