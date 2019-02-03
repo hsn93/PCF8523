@@ -38,6 +38,16 @@ PCF8523 ext_RTC(TWI0, RTC_ADDR);
   ext_RTC.settime(mydt);
   ext_RTC.batteryswitchover(0);
 ```
+### to adjust ppm:
+ * NOTE: implement in mode 0 for power saving. 
+ * NOTE: each offset is 4.069 ppm. 
+ * PPM: ppm is part per million which is 10^-6. in clock drifting its measured with seconds.
+ which means 4.069ppm = 4.069uS drift in the second == [4.069uS * 86400 seconds per day = 0.3516 seconds/day] 
+```
+ext_RTC.offset_ppm(18); //this is implemented in mode 1
+//actually this is 18 * 4.069 = 73.242 ppm offset
+```
+
 ## to get time.. 
 ```
  // to get time:
